@@ -14,3 +14,9 @@ This project implements a simplified 5G NR User-Plane protocol stack based on 3G
 * `/src`: Source code implementations (e.g., packet.cpp).
 * `/include`: Header files and protocol definitions (e.g., packet.h).
 * `/docs`: Project reports and user manuals[cite: 257, 259].
+## How to Run
+To compile and link all current stages (Stage 1 & 2), run the following command in your terminal:
+
+```bash
+g++ -I./include src/packet.cpp src/PDCP.cpp src/main.cpp -o 5G_Sim
+./5G_Sim
