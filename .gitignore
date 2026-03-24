@@ -1,0 +1,9 @@
+# Binaries and object files
+*.o
+*.out
+*.exe
+build/
+
+# OS specific
+.DS_Store
+Thumbs.db
