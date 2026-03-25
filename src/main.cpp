@@ -1,13 +1,15 @@
 #include "../include/stack_integration.h"
+#include "../include/profiler.h"
 #include <iostream>
 
 int main() {
-    std::cout << "==========================================" << std::endl;
-    std::cout << "  5G NR LAYER 2 STACK SIMULATOR (SYSTEM)  " << std::endl;
-    std::cout << "==========================================" << std::endl;
+    std::cout << "5G NR Layer 2 Stack Simulation" << std::endl;
 
-    // Calling the Orchestrator for Stage 5 Integration
+    // Execute Stage 5 (Functional Loopback)
     run_full_stack_simulation(1, 30);
+
+    // Execute Stage 6 (Performance Analysis)
+    run_performance_test(1000, 30);
 
     return 0;
 }
