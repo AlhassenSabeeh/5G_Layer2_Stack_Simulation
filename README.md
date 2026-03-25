@@ -40,13 +40,13 @@ g++ -I./include src/*.cpp -o 5G_Sim; if ($?) { .\5G_Sim }
 
 According to the project guidelines, each member contributed to a specific sublayer and documentation:
 
-- **[Name 1]**: Stage 1 - IP Dummy Packet Generator Implementation
-- **[Name 2]**: Stage 2 - PDCP Layer Protocol Logic
-- **[Name 3]**: Stage 3 - RLC Segmentation & Reassembly
-- **[Name 4]**: Stage 4 - MAC Multiplexing & Downlink Extraction
-- **[Name 5]**: Stage 5 - System Integration & Orchestrator Logic
-- **[Name 6]**: Stage 6 - High-Resolution Profiler & Performance Analysis
-- **[Name 7]**: Stage 7 - Documentation (User Manual & Technical Report)
+- **[ريم عثمان (184040)]**: Stage 1 - IP Dummy Packet Generator Implementation
+- **[ريان نور الدين (184039)]**: Stage 2 - PDCP Layer Protocol Logic
+- **[محمد فيصل (204114)]**: Stage 3 - RLC Segmentation & Reassembly
+- **[ملاذ عبد الرحمن (184101)]**: Stage 4 - MAC Multiplexing & Downlink Extraction
+- **[الحسن محمد (184025)]**: Stage 5 - System Integration & Orchestrator Logic
+- **[احمد علي (184017)]**: Stage 6 - High-Resolution Profiler & Performance Analysis
+- **[ليلى الامين حسن  (184065)]**: Stage 7 - Documentation (User Manual & Technical Report)
 
 ## 5. Directory Structure
 
