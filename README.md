@@ -1,23 +1,55 @@
-# 5G Layer 2 Stack Simulation
-This project implements a simplified 5G NR User-Plane protocol stack based on 3GPP 38-series specifications.
+# 5G NR Layer 2 Protocol Stack Simulation
 
-## Team Assignments
-* **Member 1**: Stage 1 - IP Dummy Packet Generator
-* **Member 2**: Stage 2 - PDCP Layer
-* **Member 3**: Stage 3 - RLC Layer
-* **Member 4**: Stage 4 - MAC Layer
-* **Member 5**: Stage 5 - Integration & Loopback
-* **Member 6**: Stage 6 - Profiling & Performance
-* **Member 7**: Stage 7 - Documentation (Manual & Report)
+This project implements a high-performance User Plane (U-Plane) 5G NR Layer 2 stack for simulation and analysis [1] [3] [11].
 
-## Project Structure
-* `/src`: Source code implementations (e.g., packet.cpp, PDCP.cpp, RLC.cpp).
-* `/include`: Header files and protocol definitions (e.g., packet.h, pdcp.h, rlc.h).
-* `/docs`: Project reports and user manuals.
+## 1. Project Overview
 
-## How to Run
-To compile and link all currently integrated stages (Stage 1, 2, & 3), run the following command in your terminal:
+This software simulates the packet flow from IP Generation to MAC Transport Block creation, featuring both Uplink and Downlink paths with a focus on data integrity and security [4] [13].
+
+## 2. Installation and Execution (User Manual)
+
+To run this project on a target system (Windows/Linux/MacOS), follow these steps [22] [23] [27]:
+
+### Step 1: Clone the Repository
 
 ```bash
-# Automated build for all layers
+git clone https://github.com/AlhassenSabeeh/5G_Layer2_Stack_Simulation.git
+cd 5G_Layer2_Stack_Simulation
+```
+
+### Step 2: The "Golden Command"
+
+Run the following PowerShell command to compile all sublayers and execute the full-stack simulation along with the performance profiler:
+
+```powershell
 g++ -I./include src/*.cpp -o 5G_Sim; if ($?) { .\5G_Sim }
+```
+
+## 3. Implemented Features
+
+| Stage | Component | Description |
+| :--- | :--- | :--- |
+| **Stage 1** | **Packet** | IP Dummy Packet Generator with customizable size and content. |
+| **Stage 2** | **PDCP** | Data encryption and integrity protection. |
+| **Stage 3** | **RLC** | Dynamic data segmentation and SDU reassembly. |
+| **Stage 4** | **MAC** | Multiplexing RLC PDUs into Transport Blocks with subheaders and padding. |
+| **Stage 5** | **Loopback** | Full Uplink-to-Downlink data flow verification ("Bit-Perfect Recovery"). |
+| **Stage 6** | **Profiling** | High-resolution performance analysis across varying packet sizes. |
+
+## 4. Group Members and Roles
+
+According to the project guidelines, each member contributed to a specific sublayer and documentation:
+
+- **[Name 1]**: Stage 1 - IP Dummy Packet Generator Implementation
+- **[Name 2]**: Stage 2 - PDCP Layer Protocol Logic
+- **[Name 3]**: Stage 3 - RLC Segmentation & Reassembly
+- **[Name 4]**: Stage 4 - MAC Multiplexing & Downlink Extraction
+- **[Name 5]**: Stage 5 - System Integration & Orchestrator Logic
+- **[Name 6]**: Stage 6 - High-Resolution Profiler & Performance Analysis
+- **[Name 7]**: Stage 7 - Documentation (User Manual & Technical Report)
+
+## 5. Directory Structure
+
+- `/src`: Source code (.cpp) for all protocol layers.
+- `/include`: Header files (.h) defining protocol interfaces.
+- `/docs`: Profiling data, performance analysis, and the User Manual.
