@@ -2,24 +2,23 @@
 #include <vector>
 #include "../include/packet.h"
 #include "../include/pdcp.h"
+#include "../include/rlc.h"
 
 int main() {
-    // --- STAGE 1: Generate Packet ---
+    // Stage 1: Generate Packet
     Packet p = generatePacket(1, 30);
     printPacket(p);
 
-    // --- STAGE 2: PDCP Uplink ---
-    std::cout << "\n[System] Passing Packet to PDCP..." << std::endl;
-    
-    // 1. Integrity
-    int maci = generateMACI(p.data);
-    
-    // 2. Encryption (Convert string to bytes first)
+    // Stage 2: PDCP (Encryption)
     std::vector<uint8_t> dataBytes(p.data.begin(), p.data.end());
-    std::vector<uint8_t> key = {0xAA}; // Simplified key from guidelines
-    
+    std::vector<uint8_t> key = {0xAA};
     std::vector<uint8_t> encrypted = pdcp_encrypt(dataBytes, 0, 1, UPLINK, key);
+    std::cout << "\n[PDCP] Encryption Complete. MAC-I: " << generateMACI(p.data) << std::endl;
 
-    std::cout << "[PDCP] Encryption Complete. MAC-I: " << maci << std::endl;
+    // Stage 3: RLC (Segmentation)
+    uint16_t maxRlcSize = 10; // This will split our 30-byte packet into 3 pieces
+    RLC_Process(encrypted, UPLINK, maxRlcSize);
+
+    std::cout << "\n[System] Simulation Finished Successfully." << std::endl;
     return 0;
 }
