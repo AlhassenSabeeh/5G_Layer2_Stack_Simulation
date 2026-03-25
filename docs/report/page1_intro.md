@@ -10,13 +10,13 @@ In accordance with the project guidelines for effective collaboration and distri
 
 | Member Name | Primary Responsibility | Contribution Detail |
 | :--- | :--- | :--- |
-| **[Name 1]** | Stage 1: IP Generator | Developed the dummy packet tool for traffic simulation. |
-| **[Name 2]** | Stage 2: PDCP Layer | Implemented XOR-based security and header convergence. |
-| **[Name 3]** | Stage 3: RLC Layer | Managed segmentation and SDU reassembly logic. |
-| **[Name 4]** | Stage 4: MAC Layer | Developed TB multiplexing and downlink extraction. |
-| **[Name 5]** | Stage 5: System Integration | Developed the Orchestrator and full-stack loopback. |
-| **[Name 6]** | Stage 6: Performance | Developed high-resolution profiling for sublayers. |
-| **[Name 7]** | Stage 7: Documentation | Authored User Manual and Technical Project Report. |
+| **[ريم عثمان (184040)]** | Stage 1: IP Generator | Developed the dummy packet tool for traffic simulation. |
+| **[ريان نور الدين (184039)]** | Stage 2: PDCP Layer | Implemented XOR-based security and header convergence. |
+| **[محمد فيصل (204114)]** | Stage 3: RLC Layer | Managed segmentation and SDU reassembly logic. |
+| **[ملاذ عبد الرحمن (184101)]** | Stage 4: MAC Layer | Developed TB multiplexing and downlink extraction. |
+| **[الحسن محمد (184025)]** | Stage 5: System Integration | Developed the Orchestrator and full-stack loopback. |
+| **[احمد علي (184017)]** | Stage 6: Performance | Developed high-resolution profiling for sublayers. |
+| **[ليلى الامين حسن  (184065)]** | Stage 7: Documentation | Authored User Manual and Technical Project Report. |
 
 ---
 
